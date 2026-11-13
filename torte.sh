@@ -2,7 +2,7 @@
 # installs and runs torte
 
 set -e
-TORTE_REPOSITORY=${TORTE_REPOSITORY:-https://github.com/ekuiter/torte.git}
+TORTE_REPOSITORY=${TORTE_REPOSITORY:-https://github.com/TDot305/torte}
 TORTE_REVISION=${TORTE_REVISION:-main}
 
 require() {
