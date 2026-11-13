@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y --allow-unauthenticated \
   python3-setuptools \
   pipx \
   python3-dev \
+  python3-pip \
   flex \
   bison \
   bc \
@@ -24,7 +25,7 @@ RUN git clone https://github.com/paulgazz/kmax.git \
   && cd kmax \
   && git checkout bd3e73239c83ac04e4ea4e3ce12c872475490658 \
   && sed -i 's/z3-solver/z3-solver==4.11.2/' setup.py \
-  && python3 setup.py install
+  && python3 -m pip install .
 
 # copy and set up
 # - kextractor (which is compiled against the projects' Kconfig implementations)
